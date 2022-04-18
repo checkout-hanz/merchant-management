@@ -15,7 +15,8 @@ var app = builder.Build();
 
 
 const string healthCheckEndpointPath = "/api/health";
-app.UseHealthChecks(healthCheckEndpointPath);
+app.MapHealthChecks(healthCheckEndpointPath);
+
 
 if (app.Environment.IsDevelopment())
 {
