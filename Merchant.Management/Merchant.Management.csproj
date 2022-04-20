@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Validation\**" />
+    <Content Remove="Validation\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Validation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentAssertions" Version="6.6.0" />
@@ -25,10 +32,6 @@
     <ProjectReference Include="..\IDateTimeProvider\Merchant.Management.Utils.csproj" />
     <ProjectReference Include="..\Merchant.Management.Messaging\Merchant.Management.Messaging.csproj" />
     <ProjectReference Include="..\Merchant.Management.MongoDb\Merchant.Management.MongoDb.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Validation\" />
   </ItemGroup>
 
 </Project>
