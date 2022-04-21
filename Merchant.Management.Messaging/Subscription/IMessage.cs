@@ -8,5 +8,6 @@ namespace Merchant.Management.Messaging.Subscription
 {
     public interface IMessage
     {
+        public string EventName { get; set; }
     }
 }

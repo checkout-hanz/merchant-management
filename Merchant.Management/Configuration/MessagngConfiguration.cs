@@ -17,7 +17,7 @@ namespace Merchant.Management.Configuration
             services.AddSingleton<IEventProcessor, EventProcessor>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();//(_ => new MessageBusClient(host, port));
             services.AddHostedService<MessageBusSubscriber>();
-            services.AddSingleton<ISubscriptionHandler<MerchantCreatedEvent>, MerchantCreatedHandler>();
+            //services.AddSingleton<ISubscriptionHandler<MerchantCreatedEvent>, MerchantCreatedHandler>();
             return services;
         }
     }

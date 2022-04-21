@@ -7,7 +7,7 @@ using Merchant.Management.Messaging.Publisher;
 
 namespace Merchant.Management.Messaging.Subscription
 {
-    public interface ISubscriptionHandler<in T> where T : IEvent
+    public interface ISubscriptionHandler<in T> where T : IMessage
     {
         public Task Handle(T message);
     }

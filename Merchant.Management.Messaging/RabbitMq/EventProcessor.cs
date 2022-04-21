@@ -21,7 +21,7 @@ namespace Merchant.Management.Messaging.RabbitMq
 
             var @event = (from asm in AppDomain.CurrentDomain.GetAssemblies()
                 from type in asm.GetTypes()
-                where type.IsClass && type.Name == eventType.EventName && typeof(IEvent).IsAssignableFrom(type)
+                where type.IsClass && type.Name == eventType.EventName && typeof(IMessage).IsAssignableFrom(type)
                 select type).FirstOrDefault();
 
             if (@event == null)
@@ -32,15 +32,15 @@ namespace Merchant.Management.Messaging.RabbitMq
             using var scope = _scopeFactory.CreateScope();
             var eventData = JsonSerializer.Deserialize(message, @event);
                 
-            switch (eventType?.EventName)
-            {
-                case nameof(MerchantCreatedEvent):
-                    GetHandler(scope.ServiceProvider, eventData as MerchantCreatedEvent);
-                    break;
-            }
+            //switch (eventType?.EventName)
+            //{
+            //    case nameof(MerchantCreatedEvent):
+            //        GetHandler(scope.ServiceProvider, eventData as MerchantCreatedEvent);
+            //        break;
+            //}
         }
 
-        private static void GetHandler<T>(IServiceProvider sp, T content) where T : IEvent?
+        private static void GetHandler<T>(IServiceProvider sp, T content) where T : IMessage?
         {
             var handler = sp.GetRequiredService<ISubscriptionHandler<T>>();
             handler.Handle(content);
