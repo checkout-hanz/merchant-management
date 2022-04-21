@@ -2,7 +2,7 @@
 {
     public class MerchantCreatedEvent : IEvent
     {
-        public Guid MerchantGuid { get; set; }
+        public Guid MerchantId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
     }

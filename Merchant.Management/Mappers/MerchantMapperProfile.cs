@@ -6,8 +6,14 @@ namespace Merchant.Management.Mappers
     {
         public MerchantMapperProfile()
         {
-            CreateMap<Models.CreateMerchant, MongoDb.Models.Merchant>();
-            CreateMap<Models.Merchant, MongoDb.Models.Merchant>().ReverseMap();
+            CreateMap<Models.CreateMerchant, MongoDb.Models.Merchant>()
+                .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
+                .ForMember(dest => dest.MerchantId, opt => opt.Ignore());
+
+            CreateMap<Models.Merchant, MongoDb.Models.Merchant>()
+                .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
+                .ReverseMap();
+
             CreateMap<MongoDb.Models.Merchant, Messaging.Publisher.Events.MerchantCreatedEvent>();
         }
     }

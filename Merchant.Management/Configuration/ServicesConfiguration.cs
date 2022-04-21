@@ -1,5 +1,8 @@
-﻿using Merchant.Management.Services;
+﻿using FluentValidation;
+using Merchant.Management.Models;
+using Merchant.Management.Services;
 using Merchant.Management.Utils;
+using Merchant.Management.Validators;
 
 namespace Merchant.Management.Configuration
 {
@@ -9,6 +12,7 @@ namespace Merchant.Management.Configuration
         {
             services.AddSingleton<IMerchantService, MerchantService>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+            services.AddSingleton<IValidator<CreateMerchant>, CreateMerchantValidator>();
             return services;
         }
     }

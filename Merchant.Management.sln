@@ -5,11 +5,15 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merchant.Management", "Merchant.Management\Merchant.Management.csproj", "{5A07EA01-5CFA-4414-85F3-549528086B7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Management.MongoDb", "Merchant.Management.MongoDb\Merchant.Management.MongoDb.csproj", "{7ACF9D0E-C8C3-446F-AAE5-7C579FA98360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merchant.Management.MongoDb", "Merchant.Management.MongoDb\Merchant.Management.MongoDb.csproj", "{7ACF9D0E-C8C3-446F-AAE5-7C579FA98360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Management.Messaging", "Merchant.Management.Messaging\Merchant.Management.Messaging.csproj", "{08F08F07-EDD8-4FE2-A113-379E424F6297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merchant.Management.Messaging", "Merchant.Management.Messaging\Merchant.Management.Messaging.csproj", "{08F08F07-EDD8-4FE2-A113-379E424F6297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Management.Utils", "IDateTimeProvider\Merchant.Management.Utils.csproj", "{418ACC86-4AC0-423A-8F3D-F81E1BF580C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merchant.Management.Utils", "IDateTimeProvider\Merchant.Management.Utils.csproj", "{418ACC86-4AC0-423A-8F3D-F81E1BF580C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Management.UnitTests", "Merchant.Management.UnitTests\Merchant.Management.UnitTests.csproj", "{E6F44D65-FB5A-4A2F-AC19-96910290044C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Management.IntegrationTests", "Merchant.Management.IntegrationTests\Merchant.Management.IntegrationTests.csproj", "{A8A62E52-5653-437B-B816-C64073A0226A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{418ACC86-4AC0-423A-8F3D-F81E1BF580C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418ACC86-4AC0-423A-8F3D-F81E1BF580C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{418ACC86-4AC0-423A-8F3D-F81E1BF580C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F44D65-FB5A-4A2F-AC19-96910290044C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F44D65-FB5A-4A2F-AC19-96910290044C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F44D65-FB5A-4A2F-AC19-96910290044C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F44D65-FB5A-4A2F-AC19-96910290044C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A62E52-5653-437B-B816-C64073A0226A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A62E52-5653-437B-B816-C64073A0226A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A62E52-5653-437B-B816-C64073A0226A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A62E52-5653-437B-B816-C64073A0226A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
