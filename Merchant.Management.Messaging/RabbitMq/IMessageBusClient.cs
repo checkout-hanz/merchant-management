@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Merchant.Management.Messaging.Publisher
+namespace Merchant.Management.Messaging.RabbitMq
 {
-    public interface IEvent
+    public interface IMessageBusClient
     {
-        public string EventName { get; set; }
+        void Publish(string content);
     }
 }

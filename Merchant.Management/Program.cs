@@ -14,7 +14,7 @@ builder.Services.AddSingleton<IGcpSettings>(gcpSettings);
 
 builder.Services
     .AddMongo(builder.Configuration, builder.Environment)
-    .AddMessaging()
+    .AddMessaging(builder.Configuration)
     .AddMappers()
     .AddServices();
 

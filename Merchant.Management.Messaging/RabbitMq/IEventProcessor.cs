@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Merchant.Management.Messaging.Subscription
+namespace Merchant.Management.Messaging.RabbitMq
 {
-    public abstract class SubscriptionBaseHandler : ISubscriptionHandler
+    public interface IEventProcessor
     {
+        void ProcessEvent(string message);
     }
 }

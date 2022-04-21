@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Merchant.Management.Messaging.Publisher
 {
-    public interface IEvent
+    internal class GenericEvent : IEvent
     {
         public string EventName { get; set; }
     }
