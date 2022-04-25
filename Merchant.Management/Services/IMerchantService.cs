@@ -6,6 +6,6 @@
 
         Task<IEnumerable<Models.Merchant>> GetMerchants();
 
-        Task<Models.Merchant> GetMerchant(string id);
+        Task<Models.Merchant> GetMerchant(Guid merchantId);
     }
 }

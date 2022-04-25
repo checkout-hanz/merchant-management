@@ -31,13 +31,8 @@ namespace Merchant.Management.Services
             return _mapper.Map<IEnumerable<Models.Merchant>>(merchants);
         }
 
-        public async Task<Models.Merchant> GetMerchant(string id)
+        public async Task<Models.Merchant> GetMerchant(Guid merchantId)
         {
-            if (!Guid.TryParse(id, out var merchantId))
-            {
-                return null;
-            }
-
             var merchant = await _merchantRepository.GetMerchant(merchantId);
             if (merchant == null)
             {

@@ -56,7 +56,7 @@ namespace Merchant.Management.UnitTests
         {
             _merchantRepository.Setup(x => x.GetMerchant(It.IsAny<Guid>())).ReturnsAsync((MongoDb.Models.Merchant)null);
 
-            var merchant = await _merchantService.GetMerchant(Guid.NewGuid().ToString());
+            var merchant = await _merchantService.GetMerchant(Guid.NewGuid());
 
             merchant.Should().BeNull();
         }

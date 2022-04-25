@@ -14,7 +14,8 @@ namespace Merchant.Management.Mappers
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ReverseMap();
 
-            CreateMap<MongoDb.Models.Merchant, Messaging.Publisher.Events.MerchantCreatedEvent>();
+            CreateMap<MongoDb.Models.Merchant, Messaging.Publisher.Events.MerchantCreatedEvent>()
+                .ForMember(dest => dest.EventName, opt => opt.Ignore());
         }
     }
 }

@@ -1,7 +1,7 @@
 using Merchant.Management.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://0.0.0.0:8080");
+//builder.WebHost.UseUrls("http://0.0.0.0:8080");
 // Add services to the container.
 
 builder.Services.AddControllers();
