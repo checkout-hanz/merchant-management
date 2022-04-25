@@ -24,7 +24,7 @@ namespace Merchant.Management.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Models.Merchant))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Models.Merchant>> Get(string id)
+        public async Task<ActionResult<Models.Merchant>> Get(Guid id)
         {
             var merchant = await _merchantService.GetMerchant(id);
             if (merchant == null)
